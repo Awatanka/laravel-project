@@ -16,25 +16,21 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    return view('hello');
-});
-
-Route::get('/second', function () {
-    return response('<h1>Hello second</h1>', 200)
-        ->header('Content-Type', 'text/plain');
-});
-
-Route::get('/posts/{id}', function ($id) {
-    ddd($id);
-    return response('Post' . $id);
-})->where('id', '[0-9]+');
-
-Route::get('/serch', function (Request $request) {
-    dd($request);
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' => [
+            [
+                'id' => 1,
+                'title' => 'Listing One',
+                'description' => 'Here is where you can register web routes for your application. These routes are loaded by the RouteServiceProvider and all of them will be assigned to the "web" middleware group. Make something great!'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Listing Two',
+                'description' => 'Here is where you can register web routes for your application. These routes are loaded by the RouteServiceProvider and all of them will be assigned to the "web" middleware group. Make something great!'
+            ]
+        ]
+    ]);
 });
 
 Route::get('/dashboard', function () {
