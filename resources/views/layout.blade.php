@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel Project</title>
 </head>
+
 <body>
+    <h1>Laravel Project</h1>
+
+    @yield('content')
     
 </body>
 </html>
