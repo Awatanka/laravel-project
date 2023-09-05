@@ -5,10 +5,9 @@
             <p class="mb-4">Post a gig to find a developer</p>
         </header>
 
-        <form method="POST" action="/listings">
+        <form method="POST" action="/listings" enctype="multipart/form-data">
             @csrf
             @include('partials._form-field', ['name' => 'company', 'label' => 'Company Name'])
-
             @include('partials._form-field', [
                 'name' => 'title',
                 'label' => 'Job Title',
