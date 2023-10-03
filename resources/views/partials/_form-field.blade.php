@@ -6,7 +6,7 @@
         <textarea class="border border-gray-200 rounded p-2 w-full" name="{{ $name }}" rows="{{ $rows }}"
             placeholder="{{ $placeholder }}">{{ old($name) }}</textarea>
     @else
-        <input type="{{ $type }}" class="border border-gray-200 rounded p-2 w-full" name="{{ $name }}"
+        <input type="{{ $type }}" class="border border-gray-300 rounded p-2 w-full" name="{{ $name }}"
             placeholder="{{ $placeholder }}" value="{{ old($name) }}">
     @endif
 
